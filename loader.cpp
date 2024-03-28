@@ -1,6 +1,5 @@
 ﻿#include <Windows.h>
 #include <iostream>
-//#include "res.h"
 #include "stub.h"
 
 int wordsLength = sizeof(words) / sizeof(words[0]);

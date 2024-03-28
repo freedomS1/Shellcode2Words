@@ -8,6 +8,16 @@ REPLACE_ME_FILEWORDS
 
 """
 
+banner = '''___   ___  __       ___       ______   ____    ____  ___         
+\  \ /  / |  |     /   \     /  __  \  \   \  /   / /   \     /  __  \  
+ \  V  /  |  |    /  ^  \   |  |  |  |  \   \/   / /  ^  \   |  |  |  | 
+  >   <   |  |   /  /_\  \  |  |  |  |   \_    _/ /  /_\  \  |  |  |  | 
+ /  .  \  |  |  /  _____  \ |  `--'  |     |  |  /  _____  \ |  `--'  | 
+/__/ \__\ |__| /__/     \__\ \______/      |__| /__/     \__\ \______/   J
+
+A tool that converts shellcode randomly using a dictionary!
+                                                    Github:https://github.com/xiaoyaoxianj
+'''
 
 def nop_code(file,num):
     file_size = os.path.getsize(file)
@@ -57,6 +67,7 @@ def Shellcode2Words(contents,stub):
     file.close()
 
 def main(file,num):
+    print(banner)
     contents = nop_code(file,num)
     Shellcode2Words(contents,template)
 
@@ -66,6 +77,7 @@ if __name__ == "__main__":
     parser.add_argument('-n',"--num",dest='number', help='the number of the nops', type=int)
 
     if len(sys.argv) < 2:
+        print(banner)
         parser.print_help()
         sys.exit()
 
