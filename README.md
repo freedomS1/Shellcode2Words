@@ -15,11 +15,7 @@ You can customize the number of **NOPs** you want to add
 
 ```python
 python Shellcode2Words.py xiaoyaoj.bin -nop n
-=======
 ```
-python3 main.py beacon.bin -nop n 
-```
-
 ### Result
 
 ![](./Shellcode2Words/result.png)
